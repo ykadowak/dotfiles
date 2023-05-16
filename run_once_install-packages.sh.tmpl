@@ -33,7 +33,7 @@ if ! $(command -v brew &> /dev/null); then
     export NONINTERACTIVE=1
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     # setup brew
-    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /root/.profile
+    sudo /bin/bash -c "(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /root/.profile"
 fi
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
