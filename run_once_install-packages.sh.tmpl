@@ -42,10 +42,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install gcc
 
 # if it is not a devcontainer, install dev envs
-if [[ "${REMOTE_CONTAINERS-}" != "true" ]]; then
-    echo "installing dev envs..."
-    brew install go pyenv poetry
-fi
+echo "installing dev envs..."
+brew install go pyenv poetry
 
 echo "installing zsh and starship..."
 brew install zsh
