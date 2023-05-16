@@ -42,10 +42,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-sy
 sudo apt install -y peco
 curl -fsSL https://starship.rs/install.sh | sh -s -- --yes
 
-# install dotfiles
-cp "$REPOROOT/zshrc" ~/.zshrc
-mkdir -p ~/.config
-cp "$REPOROOT/starship.toml" ~/.config/starship.toml
-
 # TODO: install git config (probably need to disable auto git config copy)
 #       only when its not a devcontainer
