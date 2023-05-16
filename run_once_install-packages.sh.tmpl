@@ -1,5 +1,9 @@
 #!/bin/bash -eux
 
+{{ if eq .chezmoi.os "darwin" -}}
+
+{{ else if eq .chezmoi.os "linux" -}}
+
 # get the directory of this file
 readonly REPOROOT="$( cd -- "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
@@ -44,3 +48,5 @@ curl -fsSL https://starship.rs/install.sh | sh -s -- --yes
 
 # TODO: install git config (probably need to disable auto git config copy)
 #       only when its not a devcontainer
+
+{{ end -}}
