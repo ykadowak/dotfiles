@@ -1,0 +1,17 @@
+[user]
+	name = ykadowak
+	email = yusuke.kadowaki.1231@gmail.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[gpg "ssh"]
+	defaultKeyCommand = ssh-add -L
+[credential]
+	helper = "!f() { /home/vscode/.vscode-server/bin/6a995c4f4cc2ced6e3237749973982e751cb0bf9/node /tmp/vscode-remote-containers-8933eec0-a2c8-4c74-9382-e2860573ee4d.js git-credential-helper $*; }; f"
